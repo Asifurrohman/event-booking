@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        Ini event card
     </div>
 </template>
 

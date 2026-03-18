@@ -11,9 +11,13 @@
     <h2 class="text-2xl font-medium">
         Your Bookings
     </h2>
+    <section class="grid grid-cols-1 gap-2">
+        <BookingItem v-for="i in 3" :key="i"></BookingItem>
+    </section>
 </template>
 
 <script setup>
+import BookingItem from '@/components/BookingItem.vue'
 import EventCard from '@/components/EventCard.vue'
 </script>
 

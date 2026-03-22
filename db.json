@@ -1,0 +1,28 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "title": "Vue.js Conference",
+            "date": "2024-09-15",
+            "description": "A conference for Vue.js enthusiasts to learn and network.",
+            "location": "New York"
+        },
+        {
+            "id": 2,
+            "title": "JavaScript Summit",
+            "date": "2024-10-20",
+            "description": "An event focused on the latest trends in JavaScript development.",
+            "location": "San Francisco"
+        },
+        {
+            "id": 3,
+            "title": "Frontend Masters Workshop",
+            "date": "2024-11-05",
+            "description": "A workshop for frontend developers to enhance their skills.",
+            "location": "Chicago"
+        }
+    ],
+    "bookings": [
+        
+    ]
+}

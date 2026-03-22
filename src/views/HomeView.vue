@@ -6,7 +6,7 @@
         All Events
     </h2>
     <section class="grid grid-cols-2 gap-4">
-        <EventCard v-for="i in 8" :key="i.id" title="Konferensi Meja Bundar" date="2026-06-01" description="Konferensi tentang vue dan JS" @register="console.log(`You're registered for this event`)" />
+        <EventCard v-for="event in events" :key="event.id" :title="event.title" :date="event.date" :description="event.description" @register="console.log(`You're registered for this event`)" />
     </section>
     <h2 class="text-2xl font-medium">
         Your Bookings
@@ -19,6 +19,23 @@
 <script setup>
 import BookingItem from '@/components/BookingItem.vue'
 import EventCard from '@/components/EventCard.vue'
+import axios from 'axios'
+import { onMounted, ref } from 'vue'
+
+const events = ref([])
+
+const fetchEvents = async () => {
+    try {
+        const response = await axios.get('http://localhost:3001/events')
+        events.value = response.data
+    } catch(error){
+        console.error('Error fetching events:', error)
+    }
+}
+
+onMounted(() => {
+    fetchEvents()
+})
 </script>
 
 <style scoped>
